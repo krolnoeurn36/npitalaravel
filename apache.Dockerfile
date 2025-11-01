@@ -5,7 +5,12 @@ FROM php:8.3-apache
 WORKDIR /var/www/html
 
 # Install system dependencies
-RUN docker-php-ext-install pdo_mysql
+RUN apt update && apt install -y \
+    git \
+    curl \
+    zip \
+    unzip \
+    && docker-php-ext-install pdo_mysql
     # && apt-get clean && rm -rf /var/lib/apt/lists/*
 # RUN apt-get update && apt-get install -y \
     # git \
