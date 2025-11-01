@@ -4,7 +4,7 @@ services:
     # build:
     #   context: .
     #   dockerfile: Dockerfile
-    image: laravelapp:1.0.1
+    image: krolnoeurnrpisb/npitlaravel:1.0.0
     container_name: laravel_app
     restart: unless-stopped
     working_dir: /var/www/html
